@@ -4,17 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Epilogue", sans-serif;
-  font-family: "Work Sans", sans-serif;
 }
 
 body {
   background: #ffffff;
   color: rgb(0, 0, 0);
+  font-family: "Epilogue", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .header {
-  position: fixed;
+  position: relative;
   margin: 0 auto;
   width: 100%;
   padding: 20px 10%;
@@ -22,7 +22,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 }
 
 .logo {
@@ -59,12 +58,13 @@ body {
   color: #8a0007ae;
 }
 
+/****Main Section****/
+
 .home {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px 10% 0;
 }
 
 .home__border {
@@ -75,6 +75,7 @@ body {
   padding: 40px;
   border: 1px solid #55555530;
   box-shadow: 5px 5px 10px #55555550;
+  border-radius: 10px;
 }
 
 .home-content {
@@ -273,15 +274,15 @@ body {
   background: #ffffff;
   border-radius: 50%;
   transform: scale(0.88);
+  transition: 0.5s ease;  
   z-index: -1;
-  transition: 0.5s ease;
 }
 
 .home-icon a:hover::after {
   transform: scale(0);
 }
 
-.home-img { 
+.home-img {
   opacity: 0;
   animation: slidezoomIn 1s ease forwards, floatImage 5s ease-in-out infinite;
   animation-delay: 0.7s, 2s;
@@ -290,7 +291,15 @@ body {
 .img-circle .image {
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 300px; 
+  overflow: hidden;
+  z-index: 1;
+}
+
+.img-circle {
+  position: relative;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   z-index: 1;
   overflow: hidden;
@@ -298,10 +307,130 @@ body {
 
 .image img {
   position: absolute;
-  left: 50%;
+  left: 40%;
+  bottom: 30px;
   transform: translateX(-50%);
   width: 100%;
   object-fit: cover;
+}
+
+/****First Section****/
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 7.5%;
+}
+
+.first__section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.first__section-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.progressbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 15px;
+  padding: 0 10px;
+  border-radius: 7px;
+  border: 1px solid #55555530;
+  box-shadow: 5px 5px 10px #55555550;
+}
+
+.progressbar .skill-box {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14;
+  font-weight: 700;
+  color: #391400;
+}
+
+.skill-box .skill-bar {
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  background: #6c43cc;
+  animation: progress 1.2s ease-in-out forwards;
+}
+
+.skill-bar .second {
+  width: 70%;
+  background: #391400;
+}
+
+.skill-bar .third {
+  width: 90%;
+  background: #d66300eb;
+}
+
+.skill-bar .forth {
+  width: 25%;
+  background: #8a0008;
+}
+
+.skill-bar .fifth {
+  width: 25%;
+  background: #534476;
+}
+
+.skill-bar .sixth {
+  width: 90%;
+  background: #282121;
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -20px;
+  top: -28px;
+  font-weight: 700;
+  color: #391400;
+}
+
+.main-title {
+  font-family: "Epilogue";
+  text-align: center;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: #391400;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes slideTop {
