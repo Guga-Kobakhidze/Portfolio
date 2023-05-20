@@ -11,7 +11,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -20,50 +27,51 @@
   <body>
     <header class="header" id="home">
       <a class="logo" href="index.html">Guga's <span>Portfolio</span></a>
-      <nav class="navbar">
+      <nav class="navbar navbar__header">
         <a class="active" href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="bx bx-menu" id="menu-icon"></div>
     </header>
     <main>
-      <section class="home">
-        <div class="home__border">
-          <div class="home-icon">
-            <a
-              href="https://www.facebook.com/profile.php?id=100010189092329"
-              target="_blank"
-              ><i class="bx bxl-facebook"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/guga-kobakhidze/"
-              target="_blank"
-              ><i class="bx bxl-linkedin"></i
-            ></a>
-            <a href="https://www.github.com" target="_blank"
-              ><i class="bx bxl-github"></i
-            ></a>
-          </div>
-          <div class="home-content">
-            <h1>I am Guga Kobakhidze</h1>
-            <h3>Web Developer</h3>
-            <p>
-              Studied at “Skillwill academy” and received certificate. There I
-              have earned a lot of skills in Web Development and now I can make
-              different Websites on my own. I have experience to work with a
-              team and manage it, also I can take any kind of difficult
-              responsibility. I have worked in “Meama” for 3 years as a manager
-              of the brand spaces. You can review my projects and also contact
-              me.
-            </p>
-            <a class="btn" href="#contact">Contact Me</a>
-            <a class="btn2" href="#projects">Check More</a>
-          </div>
-          <div class="home-img">
-            <div class="img-circle">
-              <div class="image">
-                <img src="images/img.jpg" alt="img" />
+      <section class="section">
+        <div class="container">
+          <div class="home__border">
+            <div class="home-icon">
+              <a
+                href="https://www.facebook.com/profile.php?id=100010189092329"
+                target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/guga-kobakhidze/"
+                target="_blank"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a href="https://www.github.com" target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+            <div class="home-content">
+              <h1 class="main__title">I am Guga Kobakhidze</h1>
+              <h3 class="second__title">Web Developer</h3>
+              <p class="main__paragraph">
+                Studied at “Skillwill academy” and received certificate. There I
+                have earned a lot of skills in Web Development and now I can
+                make different Websites on my own. I have experience to work
+                with a team and manage it, also I can take any kind of difficult
+                responsibility. I have worked in “Meama” for 3 years as a
+                manager of the brand spaces. You can review my projects and also
+                contact me.
+              </p>
+              <div class="btns">
+                <a class="btn" href="#contact">Contact Me</a>
+                <a class="btn2" href="#projects">Check More</a>
               </div>
+            </div>
+            <div class="image">
+              <img src="images/img.jpg" alt="img" />
             </div>
           </div>
         </div>
@@ -71,7 +79,7 @@
       <section class="section1" id="projects">
         <div class="container">
           <div class="first__section">
-            <h1 class="main-title">My Skills & Projects</h1>
+            <h1 class="main__title">My Skills & Projects</h1>
             <div class="first__section-content">
               <div class="progressbar">
                 <div class="skill-box">
@@ -176,20 +184,22 @@
         <div class="container">
           <div class="contact__section">
             <div class="Contact__info">
-              <h1 class="main-title">Contact Me</h1>
-              <p>
+              <h1 class="main__title">Contact Me</h1>
+              <p class="main__paragraph">
                 I can make different kind of design Websites <br />
                 from figma or any kind of platform. If you are <br />
                 interested in my projects, then you can contact me <br />
                 and we can cooperate. <strong>Best regards</strong>
               </p>
-              <div class="phone__img">
-                <img src="images/phone.png" alt="phone" />
-                <a href="tel:+995595543453">595543453</a>
-              </div>
-              <div class="mail__img">
-                <img src="images/mail.png" alt="mail" />
-                <a href="mailto:gugakobakhidze18@gmail.com">Guga Kobakhidze</a>
+              <div class="contact__imgs">
+                <a class="phone__img" href="tel:+995595543453"
+                  ><img class="img" src="images/phone.png" alt="phone" />
+                  595543453</a
+                >
+                <a class="mail__img" href="mailto:gugakobakhidze18@gmail.com"
+                  ><img class="img" src="images/mail.png" alt="mail" /> Guga
+                  Kobakhidze</a
+                >
               </div>
               <a
                 class="btn2"
@@ -199,7 +209,7 @@
               >
             </div>
             <div class="contact__textme">
-              <h1 class="main-title title__text">Text Me</h1>
+              <h1 class="main__title title__text">Text Me</h1>
               <div class="contact__form">
                 <input type="text" class="form" placeholder="Name*" />
                 <input type="email" class="form" placeholder="E-mail*" />
