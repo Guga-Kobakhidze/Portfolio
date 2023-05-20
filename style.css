@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -8,9 +10,15 @@
 
 body {
   background: #ffffff;
-  color: rgb(0, 0, 0);
+  color: #391400;
   font-family: "Epilogue", sans-serif;
   font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 8rem;
 }
 
 /*****Header*****/
@@ -18,12 +26,12 @@ body {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 100%;
-  padding: 20px 10%;
+  padding: 20px 10rem;
   background: #201e1e;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .logo {
@@ -63,11 +71,13 @@ body {
 /****Main Section****/
 
 .home {
-  height: 100vh;
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 150px;
 }
 
 .home__border {
@@ -309,17 +319,17 @@ body {
 
 /****First Section****/
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  padding: 10px 8em;
+.section1 {
+  margin-bottom: 150px;
 }
 
 .first__section {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 60px;
-  border-radius: 7px;
+  padding: 40px 20px;
+  border-radius: 10px;
   border: 1px solid #55555530;
   box-shadow: 5px 5px 10px #55555550;
 }
@@ -349,7 +359,7 @@ body {
 }
 
 .skill-box .title {
-  display: block;
+  display: flex;
   font-size: 14;
   font-weight: 700;
   color: #391400;
@@ -408,7 +418,6 @@ body {
 
 .main-title {
   font-family: "Epilogue";
-  text-align: center;
   font-weight: 900;
   font-size: 56px;
   line-height: 64px;
@@ -416,11 +425,6 @@ body {
   color: #391400;
   opacity: 0;
   animation: slideRight 1s ease forwards;
-  margin-top: 40px;
-}
-
-.inner__section {
-  margin-bottom: 60px;
 }
 
 .border__project {
@@ -483,6 +487,181 @@ body {
   gap: 40px;
 }
 
+/****Second Section****/
+
+.section2 {
+  margin-bottom: 150px;
+}
+
+.contact__section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  border-radius: 10px;
+  border: 1px solid #55555530;
+  box-shadow: 5px 5px 10px #55555550;
+}
+
+.Contact__info p {
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #391400;
+  margin: 20px 8px 40px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.mail__img {
+  margin-bottom: 150px;
+}
+
+.phone__img,
+.mail__img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 35px;
+}
+
+.phone__img a,
+.mail__img a {
+  font-family: "Epilogue";
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 30px;
+  color: #391400;
+  text-decoration: none;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.phone__img img,
+.mail__img img {
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  background: #391400;
+  transition: 0.8s ease;
+  margin-bottom: 20px;
+}
+
+.phone__img img:hover,
+.mail__img img:hover {
+  transform: scale(0.9);
+  background: #8a0008;
+}
+
+.contact__textme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 30px 30px;
+  border: 1px solid black;
+  width: 500px;
+  background: #201e1e;
+  border-radius: 10px;
+}
+
+.main-title.title__text {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  width: 100%;
+}
+
+.contact__form .form {
+  width: 90%;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  padding-left: 20px;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #391400;
+}
+
+.contact__form .massege {
+  width: 90%;
+  max-height: 120px;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 0 0 20px;
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #391400;
+}
+
+.btn2.btn3 {
+  margin-top: 40px;
+}
+
+/****Footer****/
+
+.footer {
+  background: #201e1e;
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 40px 0;
+}
+
+.footer__section h3 {
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.1rem;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+.navbar.navbar_footer a {
+  font-weight: 700;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+.navbar.navbar_footer {
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icons img {
+  transition: 0.5s ease;
+  border: none;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/****Animations****/
+
 @keyframes progress {
   0% {
     width: 0;
@@ -534,17 +713,5 @@ body {
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
