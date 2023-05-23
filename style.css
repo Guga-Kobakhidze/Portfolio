@@ -51,15 +51,8 @@ body {
   font-family: "epilogue" sans-serif;
 }
 
-#menu-icon {
-  font-size: 35px;
-  color: white;
-  cursor: pointer;
-  z-index: 999;
-  display: none;
-}
-
-.navbar a {
+.navbar a,
+.menu_dropdown {
   font-size: 18px;
   color: #ffff;
   text-decoration: none;
@@ -72,8 +65,49 @@ body {
   animation-delay: 0.5s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.menu_dropdown:hover {
   color: #8a0007ae;
+}
+
+.menu-icon {
+  position: relative;
+  font-size: 45px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+  color: #461e08;
+  transform: rotate(-90deg);
+}
+
+.listing {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 120%;
+  right: -40px;
+  padding: 10px 25px 10px 0;
+  list-style: none;
+  background: #201e1e;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.menu__list {
+  position: relative;
+  text-align: center;
+  display: none;
+}
+
+.menu__list:hover .listing {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 /****Main Section****/
@@ -486,7 +520,7 @@ body {
 .phone__img,
 .mail__img {
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 35px;
   font-family: "Epilogue" sans-serif;
   font-weight: 900;
@@ -678,38 +712,23 @@ body {
 
 @media (max-width: 1270px) {
   .header {
-    padding: 14px 2%;
+    padding: 14px 10%;
     transition: 0.2s;
   }
   .logo {
     padding: 5px 15px;
     margin: 0 10px;
   }
-  #menu-icon {
-    display: block;
-    padding: 5px 15px;
-    margin: 0 20px;
-  }
-  .navbar.navbar__header {
-    position: absolute;
-    top: 100%;
-    right: 2%;
-    width: 100px;
-    height: 140px;
-    background: #201e1e;
+
+  .menu__list {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 0 0 10px 10px;
-    transition: all 0.5s ease;
   }
-  .navbar.navbar__header a {
-    display: block;
-    margin: 12px 0;
-    padding: 0 25px;
-    transition: all 0.5s ease;
+
+  .navbar__header {
+    opacity: 0;
+    display: none;
   }
+
   .first__section-content {
     display: flex;
     flex-direction: column;
@@ -802,7 +821,7 @@ body {
     gap: 40px;
   }
   .mail__img,
-  .phone__img  {
+  .phone__img {
     gap: 10px;
   }
   .img {
