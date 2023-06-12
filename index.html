@@ -221,16 +221,16 @@
                 >Download CV</a
               >
             </div>
-            <div class="contact__textme">
+            <form class="contact__textme" action="https://formsubmit.co/gugakobakhidze18@gmail.com" method="POST">
               <h1 class="main__title title__text">Text Me</h1>
               <div class="contact__form">
-                <input type="text" class="form" placeholder="Name*" />
-                <input type="email" class="form" placeholder="E-mail*" />
-                <input type="text" class="form" placeholder="Subject" />
-                <textarea class="massege" placeholder="Massege"></textarea>
+                <input type="text" class="form"  placeholder="Name*" name="name" required />
+                <input type="email" class="form" placeholder="E-mail*" name="email" required />
+                <input type="text" class="form" placeholder="Subject" name="subject" required />
+                <textarea class="massege" placeholder="Massege" name="msg" required></textarea>
               </div>
-              <a class="btn2 btn3" href="#">Send</a>
-            </div>
+              <button type="submit" class="btn2 btn3">Send</button>
+            </form>
           </div>
         </div>
       </section>

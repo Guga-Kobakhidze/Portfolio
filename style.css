@@ -602,6 +602,8 @@ body {
 
 .btn2.btn3 {
   margin-top: 40px;
+  cursor: pointer;
+  border: none;
 }
 
 /****Footer****/
